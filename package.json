@@ -1,0 +1,23 @@
+{
+  "name": "xadrez",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "ts-node src/Main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "-": "^0.0.1",
+    "@types/node": "^20.8.9",
+    "D": "^1.0.0",
+    "readline-sync": "^1.4.10",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@types/readline-sync": "^1.4.6",
+    "typescript": "^5.2.2"
+  }
+}
