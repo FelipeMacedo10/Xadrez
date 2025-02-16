@@ -7,7 +7,6 @@ import { Peao } from "./models/Peoes.js";
 
 const tabuleiroHTML = document.getElementById('tabuleiro');
 const msg = document.getElementById('alerta');
-
 msg.innerHTML = "Jogador 1 joga com as peças brancas e Jogador 2 joga com as peças pretas.";
 
 class Jogo {
@@ -63,6 +62,7 @@ class Jogo {
 
             const [linhaF, colunaF] = [linha, coluna];
             const posicoes = this.jogadorAtual.organizarValores(linhaI, colunaI, linhaF, colunaF);
+            console.log(posicoes)
 
             const movimentoValido = this.tabuleiroXadrez.ValidarMovimento(...posicoes);
             const capturaValida = this.tabuleiroXadrez.ValidarCaptura(...posicoes);
@@ -93,6 +93,7 @@ class Jogo {
 
             if (!movimentoValido || (this.jogadorAtual === this.jogador1 && espacoI.cor === Corp.Preto) || (this.jogadorAtual === this.jogador2 && espacoI.cor === Corp.Branco)) {
                 msg.innerHTML = "Movimento inválido. Tente novamente.";
+                this.selecionado = null;
                 return;
             }
 
